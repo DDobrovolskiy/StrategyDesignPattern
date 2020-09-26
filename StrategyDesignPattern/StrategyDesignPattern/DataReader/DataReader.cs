@@ -5,11 +5,16 @@ using System.Text;
 
 namespace StrategyDesignPattern.DataReader
 {
-    public class DataReader
+    public static class DataReader
     {
-        public string GetReaderText (IReader reader, string details)
+        public static string GetReaderText(IReader reader, string details)
         {
             return reader.GetText(details);
+        }
+
+        public static string GetReaderText(Func<string, string> reader, string details)
+        {
+            return reader?.Invoke(details);
         }
     }
 }

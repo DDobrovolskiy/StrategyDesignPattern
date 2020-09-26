@@ -10,13 +10,17 @@ namespace StrategyDesignPattern
         {
             Console.WriteLine("Hello World!");
 
-            DataReader.DataReader dataReader = new DataReader.DataReader();
+            //DataReader.DataReader dataReader = new DataReader.DataReader();
 
-            Console.WriteLine(dataReader.GetReaderText(new StringDataReader(), "first\ntwo\nthree\nfoue\nfive"));
+            //Console.WriteLine(dataReader.GetReaderText(new StringDataReader(), "first\ntwo\nthree\nfoue\nfive"));
+
+            //Console.WriteLine("---");
+
+            //Console.WriteLine(dataReader.GetReaderText(new FileDataReader(), @"C:\Users\Dmitry\Desktop\CSharp Project\StrategyDesignPattern\StrategyDesignPattern\StrategyDesignPattern\Text.txt"));
 
             Console.WriteLine("---");
 
-            Console.WriteLine(dataReader.GetReaderText(new FileDataReader(), @"C:\Users\Dmitry\Desktop\CSharp Project\StrategyDesignPattern\StrategyDesignPattern\StrategyDesignPattern\Text.txt"));
+            Console.WriteLine(DataReader.DataReader.GetReaderText(StringDataReader.GetText, "first\ntwo\nthree\nfoue\nfive"));
 
             Console.ReadKey();
         }

@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace StrategyDesignPattern.Interface
 {
-    public class StringDataReader : IReader
+    public static class StringDataReader
     {
-        public string GetText(string details)
+        public static string GetText(string details)
         {
             if (string.IsNullOrEmpty(details))
             {
